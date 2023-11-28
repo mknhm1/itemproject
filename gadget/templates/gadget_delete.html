@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}gadget delete{% endblock %}
+
+    {% block contents %}
+    <br>
+    <div class="container">
+    <div class="row">
+    <div class="col offset-3">
+        <form methd="POST">
+            <br>
+            <p>sakuzyook</p>
+            {% csef_token %}
+            <button class="btn btn-primary my-2"
+            type="'submit">sakuzyo</button>
+            <a href="{% url 'gadget:gadget_detail' object.pk %}"
+            class="'btn btn-secondary my-2">kyanseru</a>
+        </div>
+    </div>
+    </div>
+    {% endblock %}

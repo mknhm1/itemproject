@@ -1,0 +1,24 @@
+<!-- タイトルとナビゲーションボタン -->
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <!-- タイトルと本文 -->
+      <h1 class="fw-light">gadget Gallery</h1>
+      <p class="lead text-muted">
+        gadgets.title!
+      </p>
+      <p>
+        <!-- ナビゲーションボタン -->
+        {% if user.is_authenticated %}
+          <!-- If the user is authenticated (logged in) -->
+          <a href="#" class="btn btn-primary my-2">今すぐサインアップ gadgets_title</a>
+          <a href="{% url 'accounts:logout' %}" class="btn btn-secondary my-2">ログアウト gedgettitle</a>
+        {% else %}
+          <!-- If the user is not authenticated (not logged in) -->
+          <a href="{% url 'accounts:signup' %}" class="btn btn-primary my-2">今すぐサインアップ </a>
+          <a href="{% url 'accounts:login' %}" class="btn btn-secondary my-2">ログイン gedgettitle</a>
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</section>
