@@ -40,9 +40,9 @@ urlpatterns = [
     
     # パスワードリセット完了ページ
     path('reset/done/',
-         auth_views.PasswordResetCompleteView.as_view(
-           template_name = "password_reset_done.html"),
-         name ='password_reset_complete'),
+        auth_views.PasswordResetCompleteView.as_view(
+          template_name = "password_reset_done.html"),
+        name ='password_reset_complete'),
 ]
 
 # urlpatternsにmediaフォルダーのURLパターンを追加

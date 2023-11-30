@@ -22,7 +22,7 @@ from .forms import ContactForm
 from django.views.generic import FormView
 from django.contrib import messages
 from django.core.mail import EmailMessage
-from django.views.generic import DeleteView
+
 
 class IndexView(ListView):
     '''トップページのビュー

@@ -1,4 +1,5 @@
 <!-- 静的ファイルのURLを生成するstaticタグをロードする -->
+
 {% load static %}
 <!doctype html>
 <!-- 言語指定をenからjaに変更 -->
@@ -10,7 +11,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
     <!-- タイトル変更 -->
-    <title>Log in</title>
+    <title>ログイン</title>
 
     <!-- <link rel="canonical"...>を削除 -->    
 
@@ -57,10 +58,10 @@
         <!-- Bootstrapのロゴを表示 -->
         <!-- 「static/img/bootstrap-logo.svg」の読み込み -->
         <img class="mb-4"
-             src={% static "img/bootstrap-logo.svg" %}
+        src="{% static 'img/ログインロゴ.png' %}"
              alt="" width="72"
              height="57">
-        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+        <h1 class="h3 mb-3 fw-normal">ログインしてください</h1>
         <!--
         <div class="form-floating">～</div>の2つのブロックを削除して
         以下に書き換え

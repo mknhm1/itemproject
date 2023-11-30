@@ -11,12 +11,12 @@
         <!-- ナビゲーションボタン -->
         {% if user.is_authenticated %}
           <!-- If the user is authenticated (logged in) -->
-          <a href="#" class="btn btn-primary my-2">今すぐサインアップ gadgets_title</a>
-          <a href="{% url 'accounts:logout' %}" class="btn btn-secondary my-2">ログアウト gedgettitle</a>
+          <a href="{% url 'accounts:signup' %}" class="btn btn-primary my-2">新規登録</a>
+          <a href="{% url 'accounts:logout' %}" class="btn btn-secondary my-2">ログアウト</a>
         {% else %}
           <!-- If the user is not authenticated (not logged in) -->
-          <a href="{% url 'accounts:signup' %}" class="btn btn-primary my-2">今すぐサインアップ </a>
-          <a href="{% url 'accounts:login' %}" class="btn btn-secondary my-2">ログイン gedgettitle</a>
+          <a href="{% url 'accounts:signup' %}" class="btn btn-primary my-2">新規登録</a>
+          <a href="{% url 'accounts:login' %}" class="btn btn-secondary my-2">ログイン</a>
         {% endif %}
       </p>
     </div>

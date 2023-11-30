@@ -139,7 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Gmailのアドレス、Gmailのアプリ用パスワードは
 # お使いのものを入力してください
 DEFAULT_FROM_EMAIL = 'mknhm5346@gmail.com'  # メールの送信元のアドレスを入力
-EMAIL_HOST = 'smtp.gmail.com'            # GmailのSMPTサーバー　　　
+EMAIL_HOST = 'smtp.gmail.com'            # GmailのSMPTサーバー
 EMAIL_PORT = 587                         # SMPTサーバーのポート番号
 EMAIL_HOST_USER = 'mknhm5346@gmail.com'    # Gmailのアドレスを入力
 EMAIL_HOST_PASSWORD = 'gdmt svbe pusj cvbk' # Gmailのアプリ用パスワードを入力

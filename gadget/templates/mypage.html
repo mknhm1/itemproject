@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Mypage{% endblock %}
+{% block title %}マイページ{% endblock %}
 
     {% block contents %}
     {% if user.is_authenticated %}
@@ -9,7 +9,7 @@
     <h4>{{user.username}}さんのマイページ</h4>
     {% if object_list.count == 0 %}
     {% else %}
-    <p>toukou<strong>{{object_list.count}}</strong>件</p>
+    <p>投稿件数<strong>{{object_list.count}}</strong>件</p>
     {% endif %}
     <a href="{% url 'gadget:post' %}">投稿する</a>
     </div>

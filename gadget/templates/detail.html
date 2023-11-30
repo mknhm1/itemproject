@@ -1,25 +1,36 @@
-{% extends 'base.html' %}
-{% block title %}asdf{% endblock %}
-    {% block contens %}
-    <br>
-    <div class="'container">
-        <div class="row">
-            <div class="col offset-3">
-                <h2>{{object.title}}</h2>
-                <p>{{object.comment}}</p>
-                <br>
-                <p>{{object.posted_at}}nitoukou</p>
-                <br>
-                <p><img src='{{ object.imgel.url}}'></img></p>
-                {% if object.image2 %}
-                <p><img src='{{ object.image2.url }}'></img></p>
-                {% endif %}
-                {% if request.user ==  object.user %}
-                <from method="POST">
-                    <a herf="{% url 'gadget:gadget_delete' object.pk %}"
-                    class="btn btn-primaryy my-2">sakuzyo</a>
-                </from>
-                {% endif %}
+
+        {% extends 'base.html' %}
+        {% block title %}{{ object.title }}　詳細{% endblock %}
+        {% block contents %}
+            <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col offset-3">
+                        <h2>{{ object.title }}</h2>
+                        <p>{{ object.comment }}</p>
+                        <br>
+                        <p>{{ object.posted_at }} に投稿</p>
+                        <br>
+                        <style>
+                            .responsive-image {
+                                max-width: 100%;
+                                height: auto;
+                            }
+                        </style>
+                        
+                        <!-- 画像1 -->
+                        <p><img src="{{ object.image1.url }}" alt="Image 1" class="responsive-image"></p>
+                        
+                        {% if object.image2 %}
+                        <p><img src="{{ object.image2.url }}" alt="Image 2" class="responsive-image"></p>
+                    {% endif %}
+                        {% if request.user == object.user %}
+                            <form method="POST">
+                                <a href="{% url 'gadget:gadget_delete' object.pk %}" class="btn btn-primary my-2">削除
+                                </a>
+                            </form>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
-        </div>
         {% endblock %}
