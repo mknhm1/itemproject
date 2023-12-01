@@ -1,0 +1,3 @@
+ユーザー	test
+パスワード	admin0000
+メールアドレス	ktq2390308@stu.o-hara.ac.jp
