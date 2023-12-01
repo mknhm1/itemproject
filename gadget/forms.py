@@ -13,7 +13,7 @@ class GadgetPostForm(ModelForm):
           fields: フォームで使用するモデルのフィールドを指定
         '''
         model = GadgetPost
-        fields = ['category', 'title', 'comment', 'image1', 'image2']
+        fields = ['category', 'title', 'comment', 'image1', 'image2','buy', 'map']
 
 class ContactForm(forms.Form):
     # フォームのフィールドをクラス変数として定義

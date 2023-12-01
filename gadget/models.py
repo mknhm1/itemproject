@@ -67,7 +67,24 @@ class GadgetPost(models.Model):
         verbose_name='投稿日時', # フィールドのタイトル
         auto_now_add=True       # 日時を自動追加
         )
-    
+
+    buy = models.CharField(
+        verbose_name='購入場所',  # フィールドのタイトル
+        null=True,              # データベースにnullが保存されることを許容
+        blank=True,             # フィールド値の設定は必須でない
+        max_length=500           # 最大文字数は500
+    )
+
+    map = models.CharField(
+        verbose_name='マップ',  # フィールドのタイトル
+        null=True,              # データベースにnullが保存されることを許容
+        blank=True,             # フィールド値の設定は必須でない
+        max_length=500           # 最大文字数は500
+    )
+
+
+
+
     def __str__(self):
         '''オブジェクトを文字列に変換して返す
         
